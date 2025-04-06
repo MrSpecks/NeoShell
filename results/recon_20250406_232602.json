@@ -1,0 +1,82 @@
+[
+  {
+    "url": "https://bbs.gaokao.com.cn/",
+    "error": "Cannot connect to host bbs.gaokao.com.cn:443 ssl:default [getaddrinfo failed]"
+  },
+  {
+    "url": "https://www.xueersi.com.cn/",
+    "error": "Cannot connect to host www.xueersi.com.cn:443 ssl:default [getaddrinfo failed]"
+  },
+  {
+    "url": "https://www.chinaedu.cn/",
+    "error": "Cannot connect to host www.chinaedu.cn:443 ssl:default [getaddrinfo failed]"
+  },
+  {
+    "url": "https://www.juren.com.cn/",
+    "error": "Cannot connect to host www.juren.com.cn:443 ssl:default [getaddrinfo failed]"
+  },
+  {
+    "url": "https://www.eduyunnet.cn/",
+    "error": "Cannot connect to host www.eduyunnet.cn:443 ssl:default [getaddrinfo failed]"
+  },
+  {
+    "url": "https://www.kqedu.cn/",
+    "error": "Cannot connect to host www.kqedu.cn:443 ssl:True [SSLCertVerificationError: (1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.kqedu.cn'. (_ssl.c:1018)\")]"
+  },
+  {
+    "url": "https://www.pep.com.cn/",
+    "error": "name 'stack' is not defined"
+  },
+  {
+    "url": "https://www.eduyun.cn/",
+    "error": "name 'stack' is not defined"
+  },
+  {
+    "url": "https://www.eduyun.cn/",
+    "error": "name 'stack' is not defined"
+  },
+  {
+    "url": "https://www.nedu.cn/",
+    "error": "Server disconnected"
+  },
+  {
+    "url": "https://www.eol.cn/",
+    "error": "name 'stack' is not defined"
+  },
+  {
+    "url": "https://www.xdf.cn/",
+    "error": "name 'stack' is not defined"
+  },
+  {
+    "url": "https://www.chsi.com.cn/",
+    "error": "name 'stack' is not defined"
+  },
+  {
+    "url": "https://www.xueda.cn/",
+    "error": "Cannot connect to host www.xueda.cn:443 ssl:default [The remote computer refused the network connection]"
+  },
+  {
+    "url": "https://www.hujiang.com.cn/",
+    "error": "Cannot connect to host www.hujiang.com.cn:443 ssl:default [getaddrinfo failed]"
+  },
+  {
+    "url": "https://www.eduhome.cn/",
+    "error": ""
+  },
+  {
+    "url": "https://www.zhongkao.com.cn/",
+    "error": ""
+  },
+  {
+    "url": "https://www.careerchina.cn/",
+    "error": ""
+  },
+  {
+    "url": "https://www.offcn.com.cn/",
+    "error": ""
+  },
+  {
+    "url": "https://www.233.com.cn/",
+    "error": ""
+  }
+]
