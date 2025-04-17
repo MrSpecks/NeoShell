@@ -58,7 +58,7 @@ async def fetch(session, url, retries=2):
 async def scan_target(session, url):
     result = await fetch(session, url)
     if result["status"] != "error":
-        result["tech_stack"] = detect_tech_stack(result["html"], result["headers"])
+        result["tech_stack"] = detect_tech_stack(result["headers"])
         result.pop("html", None)  # Strip heavy data
     else:
         result["tech_stack"] = ["Unknown"]

@@ -1,33 +1,73 @@
-def detect_tech_stack(html, headers=None):
-    headers = headers or {}
-    stack = []
+import requests
+from bs4 import BeautifulSoup
 
-    # Basic CMS + JS framework detection
-    if "wp-content" in html or "WordPress" in headers.get("X-Powered-By", ""):
-        stack.append("WordPress")
-    if "Joomla" in html:
-        stack.append("Joomla")
-    if "Drupal" in html:
-        stack.append("Drupal")
-    if "Magento" in html:
-        stack.append("Magento")
+def detect_tech_stack(url):
+    """
+    Detects the tech stack of a given website by analyzing headers and body content.
+    Args:
+    - url (str): The target website URL.
 
-    if "React" in html or "react" in html:
-        stack.append("ReactJS")
-    if "vue" in html or "Vue" in html:
-        stack.append("VueJS")
-    if "angular" in html:
-        stack.append("Angular")
+    Returns:
+    - List of identified tech stacks (str).
+    """
+    headers = requests.head(url).headers  # We do a HEAD request for quicker response
+    tech_stack = []
 
-    if "php" in headers.get("X-Powered-By", "").lower():
-        stack.append("PHP")
-    if "java" in headers.get("X-Powered-By", "").lower():
-        stack.append("Java")
-    if "asp.net" in headers.get("X-Powered-By", "").lower():
-        stack.append("ASP.NET")
+    # Checking HTTP Headers
+    if "X-Powered-By" in headers:
+        powered_by = headers["X-Powered-By"].lower()
+       
+        # PHP Detection
+        if "php" in powered_by:
+            tech_stack.append("PHP")
+       
+        # Node.js Detection
+        elif "express" in powered_by:
+            tech_stack.append("Node.js (Express)")
+       
+        # ASP.NET Detection
+        elif "asp.net" in powered_by:
+            tech_stack.append("ASP.NET")
+       
+        # ThinkPHP Detection
+        elif "thinkphp" in powered_by:
+            tech_stack.append("ThinkPHP")
+       
+        # Tomcat Detection
+        elif "tomcat" in powered_by:
+            tech_stack.append("Tomcat")
 
-    if not stack:
-        stack.append("Unknown")
+    # Checking HTML Body for Known Patterns
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
 
-    return list(set(stack))
+    # WordPress detection (search for wp-content)
+    if "wp-content" in response.text or "wp-admin" in response.text:
+        tech_stack.append("WordPress")
 
+    # ReactJS detection (check for React specific window object)
+    if "window.__REACT_DEVTOOLS_GLOBAL_HOOK__" in response.text:
+        tech_stack.append("ReactJS")
+
+    # Joomla detection
+    if "Joomla!" in response.text:
+        tech_stack.append("Joomla")
+
+    # Java (Servlet/JSP) detection (look for servlet-related patterns)
+    if "X-Powered-By" in headers and "java" in headers["X-Powered-By"].lower():
+        tech_stack.append("Java (Servlet/JSP)")
+
+    # Apache Detection (look for Apache in the server header)
+    if "server" in headers and "apache" in headers["server"].lower():
+        tech_stack.append("Apache")
+
+    # Check for file extensions in URLs that indicate certain technologies
+    if ".php" in url:
+        tech_stack.append("PHP")
+    if ".asp" in url or ".aspx" in url:
+        tech_stack.append("ASP.NET")
+    if ".jsp" in url:
+        tech_stack.append("Java (JSP)")
+
+    # Return the identified tech stacks
+    return tech_stack
