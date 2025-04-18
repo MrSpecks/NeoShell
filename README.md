@@ -15,6 +15,19 @@ Built with concurrency in mind, this tool is meant for offensive security profes
 
 ---
 
+## Contributing
+
+We welcome pull requests and suggestions! If you’d like to help us build NeoShell into an even more powerful tool, feel free to:
+
+- Fork this repo
+- Create a branch
+- Make your changes
+- Submit a pull request
+
+Let’s build something legendary together.
+
+---
+
 ## Key Features
 
 - **CMS & Stack Detection**
@@ -61,16 +74,3 @@ This tool is ideal for:
 git clone https://github.com/kaegee/universal-webshell-tool.git
 cd universal-webshell-tool
 pip install -r requirements.txt
-
----
-
-## Contributing
-
-We welcome pull requests and suggestions! If you’d like to help us build NeoShell into an even more powerful tool, feel free to:
-
-- Fork this repo
-- Create a branch
-- Make your changes
-- Submit a pull request
-
-Let’s build something legendary together.
