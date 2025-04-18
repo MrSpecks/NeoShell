@@ -1,0 +1,15 @@
+
+=== SCAN SUMMARY ===
+Total Targets Scanned: 30
+Successful Scans: 30
+Failed Scans: 0
+
+Detected Stacks:
+ - Nginx: 3 site(s)
+ - PHP: 3 site(s)
+ - WordPress: 3 site(s)
+ - VueJS: 3 site(s)
+ - ReactJS: 19 site(s)
+ - Angular: 1 site(s)
+ - Unknown: 7 site(s)
+ - Apache: 1 site(s)

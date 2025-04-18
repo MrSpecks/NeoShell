@@ -1,0 +1,95 @@
+2025-04-18 13:00:01,959 - ERROR - https://wordpress.com - ERROR: HTTPSConnectionPool(host='wordpress.com', port=443): Read timed out. (read timeout=5)
+2025-04-18 13:00:05,044 - INFO - https://www.netflix.com - Stack: VueJS, ReactJS
+2025-04-18 13:00:06,202 - INFO - https://www.paypal.com - Stack: ReactJS
+2025-04-18 13:00:07,859 - INFO - https://github.com - Stack: ReactJS
+2025-04-18 13:00:09,086 - INFO - https://stackoverflow.com - Stack: VueJS, ReactJS, Angular
+2025-04-18 13:00:09,257 - INFO - https://www.upwork.com - Stack: Unknown
+2025-04-18 13:00:09,499 - INFO - https://trello.com - Stack: ReactJS
+2025-04-18 13:00:12,030 - INFO - https://www.airbnb.com - Stack: ReactJS, Nginx
+2025-04-18 13:00:13,070 - INFO - https://www.bbc.com - Stack: ReactJS
+2025-04-18 13:00:14,839 - INFO - https://www.walmart.com - Stack: ReactJS
+2025-04-18 13:00:15,806 - INFO - https://www.etsy.com - Stack: Unknown
+2025-04-18 13:00:16,481 - INFO - https://www.nytimes.com - Stack: ReactJS, WordPress
+2025-04-18 13:00:19,545 - INFO - https://www.dropbox.com - Stack: ReactJS
+2025-04-18 13:00:20,564 - INFO - https://www.linkedin.com - Stack: Unknown
+2025-04-18 13:00:21,479 - INFO - https://www.reddit.com - Stack: ReactJS
+2025-04-18 13:00:22,029 - INFO - https://www.instagram.com - Stack: VueJS, ReactJS, PHP
+2025-04-18 13:00:23,067 - INFO - https://slack.com - Stack: Apache
+2025-04-18 13:00:23,551 - INFO - https://www.twitch.tv - Stack: ReactJS
+2025-04-18 13:00:24,891 - INFO - https://www.alibaba.com - Stack: ReactJS
+2025-04-18 13:00:26,334 - INFO - https://www.baidu.com - Stack: Unknown
+2025-04-18 13:00:26,564 - INFO - https://medium.com - Stack: Unknown
+2025-04-18 13:00:26,991 - INFO - https://www.shopify.com - Stack: ReactJS
+2025-04-18 13:00:27,832 - INFO - https://www.coursera.org - Stack: ReactJS, WordPress
+2025-04-18 13:00:29,248 - INFO - https://zoom.us - Stack: ReactJS
+2025-04-18 13:00:29,649 - INFO - https://asana.com - Stack: ReactJS
+2025-04-18 13:00:31,006 - INFO - https://www.squarespace.com - Stack: ReactJS
+2025-04-18 13:00:32,625 - INFO - https://dribbble.com - Stack: Nginx
+2025-04-18 13:00:33,022 - INFO - https://www.zillow.com - Stack: Unknown
+2025-04-18 13:00:35,395 - INFO - https://www.hulu.com - Stack: Unknown
+2025-04-18 13:00:36,315 - INFO - https://www.wikipedia.org - Stack: PHP
+2025-04-18 13:00:36,320 - INFO - Scan complete.
+2025-04-18 13:00:36,321 - INFO - 
+=== SCAN SUMMARY ===
+Total Targets Scanned: 30
+Successful Scans: 29
+Failed Scans: 1
+
+Detected Stacks:
+ - Error: 1 site(s)
+ - VueJS: 3 site(s)
+ - ReactJS: 19 site(s)
+ - Angular: 1 site(s)
+ - Unknown: 7 site(s)
+ - Nginx: 2 site(s)
+ - WordPress: 2 site(s)
+ - PHP: 2 site(s)
+ - Apache: 1 site(s)
+
+2025-04-18 13:04:50,651 - INFO - https://wordpress.com - Stack: Nginx, PHP, WordPress
+2025-04-18 13:04:53,961 - INFO - https://www.netflix.com - Stack: VueJS, ReactJS
+2025-04-18 13:04:55,396 - INFO - https://www.paypal.com - Stack: ReactJS
+2025-04-18 13:04:55,692 - INFO - https://github.com - Stack: ReactJS
+2025-04-18 13:04:56,807 - INFO - https://stackoverflow.com - Stack: Angular, VueJS, ReactJS
+2025-04-18 13:04:56,939 - INFO - https://www.upwork.com - Stack: Unknown
+2025-04-18 13:04:57,203 - INFO - https://trello.com - Stack: ReactJS
+2025-04-18 13:05:00,321 - INFO - https://www.airbnb.com - Stack: Nginx, ReactJS
+2025-04-18 13:05:00,609 - INFO - https://www.bbc.com - Stack: ReactJS
+2025-04-18 13:05:01,198 - INFO - https://www.walmart.com - Stack: ReactJS
+2025-04-18 13:05:02,206 - INFO - https://www.etsy.com - Stack: Unknown
+2025-04-18 13:05:04,658 - INFO - https://www.nytimes.com - Stack: WordPress, ReactJS
+2025-04-18 13:05:06,678 - INFO - https://www.dropbox.com - Stack: ReactJS
+2025-04-18 13:05:07,568 - INFO - https://www.linkedin.com - Stack: Unknown
+2025-04-18 13:05:09,269 - INFO - https://www.reddit.com - Stack: ReactJS
+2025-04-18 13:05:09,803 - INFO - https://www.instagram.com - Stack: VueJS, ReactJS, PHP
+2025-04-18 13:05:10,805 - INFO - https://slack.com - Stack: Apache
+2025-04-18 13:05:11,311 - INFO - https://www.twitch.tv - Stack: ReactJS
+2025-04-18 13:05:12,277 - INFO - https://www.alibaba.com - Stack: ReactJS
+2025-04-18 13:05:14,536 - INFO - https://www.baidu.com - Stack: Unknown
+2025-04-18 13:05:14,759 - INFO - https://medium.com - Stack: Unknown
+2025-04-18 13:05:15,095 - INFO - https://www.shopify.com - Stack: ReactJS
+2025-04-18 13:05:16,337 - INFO - https://www.coursera.org - Stack: WordPress, ReactJS
+2025-04-18 13:05:18,836 - INFO - https://zoom.us - Stack: ReactJS
+2025-04-18 13:05:19,239 - INFO - https://asana.com - Stack: ReactJS
+2025-04-18 13:05:20,457 - INFO - https://www.squarespace.com - Stack: ReactJS
+2025-04-18 13:05:21,932 - INFO - https://dribbble.com - Stack: Nginx
+2025-04-18 13:05:22,395 - INFO - https://www.zillow.com - Stack: Unknown
+2025-04-18 13:05:24,458 - INFO - https://www.hulu.com - Stack: Unknown
+2025-04-18 13:05:25,637 - INFO - https://www.wikipedia.org - Stack: PHP
+2025-04-18 13:05:25,642 - INFO - Scan complete.
+2025-04-18 13:05:25,642 - INFO - 
+=== SCAN SUMMARY ===
+Total Targets Scanned: 30
+Successful Scans: 30
+Failed Scans: 0
+
+Detected Stacks:
+ - Nginx: 3 site(s)
+ - PHP: 3 site(s)
+ - WordPress: 3 site(s)
+ - VueJS: 3 site(s)
+ - ReactJS: 19 site(s)
+ - Angular: 1 site(s)
+ - Unknown: 7 site(s)
+ - Apache: 1 site(s)
+
