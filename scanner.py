@@ -1,7 +1,16 @@
 import requests
 from tqdm import tqdm
 from core.stack_fingerprint import detect_stack
+import json
+import os
 from datetime import datetime
+
+# Color codes for terminal output
+class Colors:
+    OK = '\033[92m'
+    ERROR = '\033[91m'
+    INFO = '\033[94m'
+    RESET = '\033[0m'
 
 def load_targets(file_path="targets.txt"):
     with open(file_path, "r") as f:
@@ -17,56 +26,39 @@ def scan_target(url):
     except Exception as e:
         return {"url": url, "error": str(e)}
 
-def log_results(content, log_file="scan.log"):
-    with open(log_file, "a") as log:
-        log.write(content + "\n")
-
 def main():
     targets = load_targets()
     results = []
-
-    print(f"\nStarted scan at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
 
     for url in tqdm(targets, desc="Scanning Targets"):
         result = scan_target(url)
         results.append(result)
 
-    # Categorize results
-    success = [r for r in results if "stack" in r and r["stack"]]
-    unknown = [r for r in results if "stack" in r and not r["stack"]]
-    errors = [r for r in results if "error" in r]
+    print("\n" + Colors.INFO + "Scan Summary:" + Colors.RESET)
+    log_lines = []
 
-    # Display scan results
-    print("\nScan Results:")
     for res in results:
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         if "error" in res:
-            print(f"[ERROR] {res['url']} - {res['error']}")
-        elif res["stack"]:
-            print(f"[KNOWN] {res['url']} => {', '.join(res['stack'])}")
+            msg = f"[ERROR] {res['url']:<40} - {res['error']}"
+            print(f"{Colors.ERROR}{msg}{Colors.RESET}")
         else:
-            print(f"[UNKNOWN] {res['url']}")
+            detected_stack = ', '.join(res['stack']) if res['stack'] else "Unknown"
+            msg = f"[OK]    {res['url']:<40} - Stack: {detected_stack}"
+            print(f"{Colors.OK}{msg}{Colors.RESET}")
+        log_lines.append(f"[{timestamp}] {msg}")
 
-    # Build summary with tagging
-    summary = "\n--- Scan Summary ---\n"
-    summary += f"Total Targets: {len(results)}\n"
-    summary += f"Successful Detections: {len(success)}\n"
-    summary += f"Unknown Stacks: {len(unknown)}\n"
-    summary += f"Errors: {len(errors)}\n"
+    # Write raw logs
+    os.makedirs("logs", exist_ok=True)
+    with open("logs/scan.log", "w") as log_file:
+        for line in log_lines:
+            log_file.write(line + "\n")
 
-    summary += "\n[+] Successful Detections:\n"
-    for s in success:
-        summary += f"[KNOWN] {s['url']} => {', '.join(s['stack'])}\n"
+    # Write JSON report
+    with open("logs/scan_report.json", "w") as json_file:
+        json.dump(results, json_file, indent=4)
 
-    summary += "\n[~] Unknown Stack:\n"
-    for u in unknown:
-        summary += f"[UNKNOWN] {u['url']}\n"
-
-    summary += "\n[!] Errors:\n"
-    for e in errors:
-        summary += f"[ERROR] {e['url']} - {e['error']}\n"
-
-    print(summary)
-    log_results(summary)
+    print(f"\n{Colors.INFO}Scan reports saved to logs/scan.log and logs/scan_report.json{Colors.RESET}")
 
 if __name__ == "__main__":
     main()

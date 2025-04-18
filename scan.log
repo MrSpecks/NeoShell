@@ -41,3 +41,89 @@ Errors: 0
 
 [!] Errors:
 
+
+--- Scan Summary ---
+Total Targets: 30
+Successful Detections: 28
+Unknown Stacks: 0
+Errors: 2
+
+[+] Successful Detections:
+[KNOWN] https://wordpress.com => PHP, WordPress, Nginx
+[KNOWN] https://www.netflix.com => ReactJS, VueJS
+[KNOWN] https://www.paypal.com => ReactJS
+[KNOWN] https://github.com => ReactJS
+[KNOWN] https://stackoverflow.com => ReactJS, VueJS, Angular
+[KNOWN] https://www.upwork.com => Unknown
+[KNOWN] https://trello.com => ReactJS
+[KNOWN] https://www.airbnb.com => ReactJS, Nginx
+[KNOWN] https://www.bbc.com => ReactJS
+[KNOWN] https://www.walmart.com => ReactJS
+[KNOWN] https://www.etsy.com => Unknown
+[KNOWN] https://www.nytimes.com => ReactJS, WordPress
+[KNOWN] https://www.dropbox.com => ReactJS
+[KNOWN] https://www.linkedin.com => Unknown
+[KNOWN] https://www.reddit.com => ReactJS
+[KNOWN] https://slack.com => Apache
+[KNOWN] https://www.twitch.tv => ReactJS
+[KNOWN] https://www.alibaba.com => ReactJS
+[KNOWN] https://www.baidu.com => Unknown
+[KNOWN] https://medium.com => Unknown
+[KNOWN] https://www.shopify.com => ReactJS
+[KNOWN] https://www.coursera.org => ReactJS, WordPress
+[KNOWN] https://asana.com => ReactJS
+[KNOWN] https://www.squarespace.com => ReactJS
+[KNOWN] https://dribbble.com => Nginx
+[KNOWN] https://www.zillow.com => Unknown
+[KNOWN] https://www.hulu.com => Unknown
+[KNOWN] https://www.wikipedia.org => PHP
+
+[~] Unknown Stack:
+
+[!] Errors:
+[ERROR] https://www.instagram.com - HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F10A507250>, 'Connection to www.instagram.com timed out. (connect timeout=5)'))
+[ERROR] https://zoom.us - HTTPSConnectionPool(host='www.zoom.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F10A506D50>, 'Connection to www.zoom.com timed out. (connect timeout=5)'))
+
+
+--- Scan Summary ---
+Total Targets: 30
+Successful Detections: 30
+Unknown Stacks: 0
+Errors: 0
+
+[+] Successful Detections:
+[KNOWN] https://wordpress.com => WordPress, Nginx, PHP
+[KNOWN] https://www.netflix.com => VueJS, ReactJS
+[KNOWN] https://www.paypal.com => ReactJS
+[KNOWN] https://github.com => ReactJS
+[KNOWN] https://stackoverflow.com => Angular, VueJS, ReactJS
+[KNOWN] https://www.upwork.com => Unknown
+[KNOWN] https://trello.com => ReactJS
+[KNOWN] https://www.airbnb.com => Nginx, ReactJS
+[KNOWN] https://www.bbc.com => ReactJS
+[KNOWN] https://www.walmart.com => ReactJS
+[KNOWN] https://www.etsy.com => Unknown
+[KNOWN] https://www.nytimes.com => ReactJS, WordPress
+[KNOWN] https://www.dropbox.com => ReactJS
+[KNOWN] https://www.linkedin.com => Unknown
+[KNOWN] https://www.reddit.com => ReactJS
+[KNOWN] https://www.instagram.com => VueJS, ReactJS, PHP
+[KNOWN] https://slack.com => Apache
+[KNOWN] https://www.twitch.tv => ReactJS
+[KNOWN] https://www.alibaba.com => ReactJS
+[KNOWN] https://www.baidu.com => Unknown
+[KNOWN] https://medium.com => Unknown
+[KNOWN] https://www.shopify.com => ReactJS
+[KNOWN] https://www.coursera.org => ReactJS, WordPress
+[KNOWN] https://zoom.us => ReactJS
+[KNOWN] https://asana.com => ReactJS
+[KNOWN] https://www.squarespace.com => ReactJS
+[KNOWN] https://dribbble.com => Nginx
+[KNOWN] https://www.zillow.com => Unknown
+[KNOWN] https://www.hulu.com => Unknown
+[KNOWN] https://www.wikipedia.org => PHP
+
+[~] Unknown Stack:
+
+[!] Errors:
+

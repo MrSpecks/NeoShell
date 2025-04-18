@@ -1,0 +1,30 @@
+[2025-04-18 15:07:26] [OK]    https://wordpress.com                    - Stack: PHP, Nginx, WordPress
+[2025-04-18 15:07:26] [OK]    https://www.netflix.com                  - Stack: VueJS, ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.paypal.com                   - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://github.com                       - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://stackoverflow.com                - Stack: VueJS, Angular, ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.upwork.com                   - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://trello.com                       - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.airbnb.com                   - Stack: ReactJS, Nginx
+[2025-04-18 15:07:26] [OK]    https://www.bbc.com                      - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.walmart.com                  - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.etsy.com                     - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://www.nytimes.com                  - Stack: ReactJS, WordPress
+[2025-04-18 15:07:26] [OK]    https://www.dropbox.com                  - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.linkedin.com                 - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://www.reddit.com                   - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.instagram.com                - Stack: VueJS, PHP, ReactJS
+[2025-04-18 15:07:26] [OK]    https://slack.com                        - Stack: Apache
+[2025-04-18 15:07:26] [OK]    https://www.twitch.tv                    - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.alibaba.com                  - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.baidu.com                    - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://medium.com                       - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://www.shopify.com                  - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.coursera.org                 - Stack: ReactJS, WordPress
+[2025-04-18 15:07:26] [OK]    https://zoom.us                          - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://asana.com                        - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://www.squarespace.com              - Stack: ReactJS
+[2025-04-18 15:07:26] [OK]    https://dribbble.com                     - Stack: Nginx
+[2025-04-18 15:07:26] [OK]    https://www.zillow.com                   - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://www.hulu.com                     - Stack: Unknown
+[2025-04-18 15:07:26] [OK]    https://www.wikipedia.org                - Stack: PHP

@@ -1,0 +1,192 @@
+[
+    {
+        "url": "https://wordpress.com",
+        "stack": [
+            "PHP",
+            "Nginx",
+            "WordPress"
+        ]
+    },
+    {
+        "url": "https://www.netflix.com",
+        "stack": [
+            "VueJS",
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.paypal.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://github.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://stackoverflow.com",
+        "stack": [
+            "VueJS",
+            "Angular",
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.upwork.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://trello.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.airbnb.com",
+        "stack": [
+            "ReactJS",
+            "Nginx"
+        ]
+    },
+    {
+        "url": "https://www.bbc.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.walmart.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.etsy.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.nytimes.com",
+        "stack": [
+            "ReactJS",
+            "WordPress"
+        ]
+    },
+    {
+        "url": "https://www.dropbox.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.linkedin.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.reddit.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.instagram.com",
+        "stack": [
+            "VueJS",
+            "PHP",
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://slack.com",
+        "stack": [
+            "Apache"
+        ]
+    },
+    {
+        "url": "https://www.twitch.tv",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.alibaba.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.baidu.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://medium.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.shopify.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.coursera.org",
+        "stack": [
+            "ReactJS",
+            "WordPress"
+        ]
+    },
+    {
+        "url": "https://zoom.us",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://asana.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.squarespace.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://dribbble.com",
+        "stack": [
+            "Nginx"
+        ]
+    },
+    {
+        "url": "https://www.zillow.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.hulu.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.wikipedia.org",
+        "stack": [
+            "PHP"
+        ]
+    }
+]
