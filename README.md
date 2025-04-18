@@ -5,6 +5,15 @@
 **Status:** In Development  
 **Disclaimer:** For educational and authorized testing purposes only.
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Contributing](#contributing)
+- [Key Features](#key-features)
+- [Use Case](#use-case)
+- [How It Works](#how-it-works)
+- [Installation](#installation)
+
 ---
 
 ## Overview
