@@ -1,18 +1,7 @@
 import requests
 from tqdm import tqdm
 from core.stack_fingerprint import detect_stack
-from collections import defaultdict
-import logging
-import os
-
-# Setup logging
-os.makedirs("results", exist_ok=True)
-logging.basicConfig(
-    filename='results/scan.log',
-    filemode='a',
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.INFO
-)
+from datetime import datetime
 
 def load_targets(file_path="targets.txt"):
     with open(file_path, "r") as f:
@@ -28,57 +17,56 @@ def scan_target(url):
     except Exception as e:
         return {"url": url, "error": str(e)}
 
+def log_results(content, log_file="scan.log"):
+    with open(log_file, "a") as log:
+        log.write(content + "\n")
+
 def main():
     targets = load_targets()
     results = []
 
-    # Summary tracking
-    total_targets = 0
-    successful_scans = 0
-    failed_scans = 0
-    stack_counter = defaultdict(int)
-
-    print("[*] Starting scan...\n")
+    print(f"\nStarted scan at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
 
     for url in tqdm(targets, desc="Scanning Targets"):
-        total_targets += 1
         result = scan_target(url)
         results.append(result)
 
-        if "error" in result:
-            failed_scans += 1
-            stack_counter["Error"] += 1
-            logging.error(f"{result['url']} - ERROR: {result['error']}")
-        else:
-            successful_scans += 1
-            for stack in result["stack"]:
-                stack_counter[stack] += 1
-            logging.info(f"{result['url']} - Stack: {', '.join(result['stack'])}")
+    # Categorize results
+    success = [r for r in results if "stack" in r and r["stack"]]
+    unknown = [r for r in results if "stack" in r and not r["stack"]]
+    errors = [r for r in results if "error" in r]
 
+    # Display scan results
     print("\nScan Results:")
     for res in results:
         if "error" in res:
             print(f"[ERROR] {res['url']} - {res['error']}")
+        elif res["stack"]:
+            print(f"[KNOWN] {res['url']} => {', '.join(res['stack'])}")
         else:
-            print(f"[OK] {res['url']} - Stack: {', '.join(res['stack'])}")
+            print(f"[UNKNOWN] {res['url']}")
 
-    # Summary output
-    summary_text = "\n=== SCAN SUMMARY ===\n"
-    summary_text += f"Total Targets Scanned: {total_targets}\n"
-    summary_text += f"Successful Scans: {successful_scans}\n"
-    summary_text += f"Failed Scans: {failed_scans}\n"
-    summary_text += "\nDetected Stacks:\n"
-    for stack, count in stack_counter.items():
-        summary_text += f" - {stack}: {count} site(s)\n"
+    # Build summary with tagging
+    summary = "\n--- Scan Summary ---\n"
+    summary += f"Total Targets: {len(results)}\n"
+    summary += f"Successful Detections: {len(success)}\n"
+    summary += f"Unknown Stacks: {len(unknown)}\n"
+    summary += f"Errors: {len(errors)}\n"
 
-    print(summary_text)
+    summary += "\n[+] Successful Detections:\n"
+    for s in success:
+        summary += f"[KNOWN] {s['url']} => {', '.join(s['stack'])}\n"
 
-    # Save summary
-    with open('results/summary.txt', 'w') as f:
-        f.write(summary_text)
+    summary += "\n[~] Unknown Stack:\n"
+    for u in unknown:
+        summary += f"[UNKNOWN] {u['url']}\n"
 
-    logging.info("Scan complete.")
-    logging.info(summary_text)
+    summary += "\n[!] Errors:\n"
+    for e in errors:
+        summary += f"[ERROR] {e['url']} - {e['error']}\n"
+
+    print(summary)
+    log_results(summary)
 
 if __name__ == "__main__":
     main()
