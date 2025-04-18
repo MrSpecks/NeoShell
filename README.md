@@ -1,7 +1,7 @@
 # NeoShell
 
 ![Status](https://img.shields.io/badge/status-In%20Development-yellow)
-![License](https://img.shields.io/github/license/kaegee/universal-webshell-tool)
+![License](https://img.shields.io/github/license/MrSpecks/NeoShell)
 
 **Author:** MrSpecks  
 **License:** MIT  
