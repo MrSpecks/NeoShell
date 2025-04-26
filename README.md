@@ -16,6 +16,7 @@
 - [Use Case](#use-case)
 - [How It Works](#how-it-works)
 - [Installation](#installation)
+- [Usage](#usage)
 - [FAQ](#faq)
 - [License](#license)
 - [Contact](#contact)
