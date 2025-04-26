@@ -16,7 +16,9 @@
 - [Use Case](#use-case)
 - [How It Works](#how-it-works)
 - [Installation](#installation)
-
+- [FAQ](#faq)
+- [License](#license)
+- [Contact](#contact)
 ---
 
 ## Overview
@@ -99,7 +101,7 @@ python neoshell.py --help
 ```
 ---
 
-## Usage**
+## Usage
 
 ### **Running a Scan**
 
