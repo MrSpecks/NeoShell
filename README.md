@@ -83,6 +83,108 @@ This tool is ideal for:
 ## Installation
 
 ```bash
-git clone https://github.com/kaegee/universal-webshell-tool.git
-cd universal-webshell-tool
+git clone git clone https://github.com/MrSpecks/NeoShell.git
+   cd NeoShell
+```
+
+### **1.Install Dependencies**
+```bash
 pip install -r requirements.txt
+```
+Note: If pip fails, try python3 -m pip install -r requirements.txt.
+
+### **2.Verify the installation**
+```bash
+python neoshell.py --help
+```
+---
+
+## Usage**
+
+### **Running a Scan**
+
+Start a recon scan by providing a list of target URLs and a scan profile:
+```bash 
+python neoshell.py --targets targets.txt --profile aggressive
+```
+
+Profiles: Aggressive maximizes speed; passive prioritizes stealth.
+
+## **Available Commands**
+--targets <file>: Input file with target URLs (e.g., targets.txt).
+--profile <profile>: Scan profile (aggressive, passive, etc.).
+--output <directory>: Output directory for reports.
+--help: Display help and options.
+
+### **Example Output**
+```bash
+$ python neoshell.py --help
+NeoShell v1.0 - CMS Recon & Webshell Payload Generator
+Usage: neoshell.py [options]
+...
+```
+
+## **Configuration**
+### **Payload Settings**
+Configure NeoShell to deploy specific payloads based on CMS type, version, or detected plugins in config.json. The default_payload is used when no specific match is found.
+```json
+{
+  "payloads": {
+    "wordpress": ["wp-shell.php", "wp-reverse-shell.php"],
+    "joomla": ["joomla-shell.php"]
+  },
+  "default_payload": "wp-shell.php",
+  "log_config": {
+    "path": "logs/",
+    "format": "timestamped"
+  }
+}
+```
+Note: Validate changes with a JSON linter to avoid errors.
+
+### **Logging**
+Logs are generated in the logs/ directory by default. Modify log_config in config.json to change the path or format.
+
+## **Development & Contributions**
+We welcome contributions to make NeoShell better! 
+Follow these steps:
+1. Fork the repository on GitHub.
+2. Create a new branch:
+```bash
+git checkout -b feature-name
+```
+3. Commit your changes:
+```bash
+git commit -m "Add feature X"
+```
+4. Push to your fork:
+```bash
+git push origin feature-name
+```
+5. Submit a pull request to merge into the main repository.
+
+---
+
+## FAQ
+
+**Q: Can I use NeoShell for unauthorized pentesting?**  
+A: No, NeoShell is strictly for authorized engagements. Always obtain written consent from the target organization.
+
+**Q: How do I contribute to NeoShell?**  
+A: See the [Development & Contributions](#development--contributions) section for guidelines.
+
+**Q: Can I run NeoShell on a cloud server?**  
+A: Yes, NeoShell works on any system with Python 3.7+ and dependencies, including AWS or Azure.
+
+---
+
+## License
+
+NeoShell is licensed under the MIT License. See the [LICENSE](https://github.com/MrSpecks/NeoShell/blob/main/LICENSE) file for details.
+
+---
+
+## 🛡️ NeoShell: Built for Pentesters, Powered by Community
+
+*Explore, contribute, and secure the web responsibly.*  
+[Back to NeoShell Repository](https://github.com/MrSpecks/NeoShell)
