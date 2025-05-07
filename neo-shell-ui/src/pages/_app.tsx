@@ -1,7 +1,23 @@
 import "@fontsource/fira-code";
 import "@/src/styles/globals.css";
 import type { AppProps } from "next/app";
+// pages/_app.tsx or a specific page component
+import { useState, useEffect } from 'react';
+import MatrixSplash from '../components/MatrixSplash';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000); // Display for 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      {loading && <MatrixSplash />}
+      <Component {...pageProps} />
+    </>
+  );
 }
+export default MyApp;
