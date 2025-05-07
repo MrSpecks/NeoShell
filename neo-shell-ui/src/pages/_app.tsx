@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // Display for 3 seconds
+    const timer = setTimeout(() => setLoading(false));
     return () => clearTimeout(timer);
   }, []);
 
