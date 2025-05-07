@@ -1,9 +1,9 @@
 {
-    "extends": ["next/core-web-vitals", "prettier"],
-    "plugins": ["tailwindcss"],
-    "rules": {
-      "tailwindcss/classnames-order": "warn",
-      "react/jsx-key": "warn",
-      "no-console": "off"
-    }
-  }
+  module.exports = {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  };
+}
+// This file is used to configure PostCSS, a tool for transforming CSS with JavaScript.
