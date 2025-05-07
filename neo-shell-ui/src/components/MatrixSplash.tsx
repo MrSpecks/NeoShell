@@ -72,7 +72,7 @@ export default function MatrixSplash({ onContinue }: { onContinue: () => void })
               typewriter
                 .typeString("Welcome to NeoShell")
                 .pauseFor(2000)
-                .typeString("Are you ready to uncover the truth?")
+                .typeString("<br /><br /> Are you ready to uncover the truth?")
                 .start();
             }}
             options={{
