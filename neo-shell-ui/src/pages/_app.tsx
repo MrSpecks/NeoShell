@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {loading && <MatrixSplash />}
+      {loading && <MatrixSplash onContinue={function (): void {
+        throw new Error("Function not implemented.");
+      } } />}
       <Component {...pageProps} />
     </>
   );
