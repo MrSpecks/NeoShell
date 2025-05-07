@@ -1,6 +1,6 @@
 // src/pages/api/shell.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import { simulateShellCommand } from "@/utils/commands";
+import { simulateShellCommand } from "@/src/utils/commands";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { cmd } = req.body;

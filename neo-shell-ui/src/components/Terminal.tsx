@@ -9,19 +9,26 @@ const Terminal = () => {
 
   const handleCommand = async () => {
     if (!input.trim()) return;
-    // Inside handleCommand()
-    if (data.result === "__CLEAR__") {
-      setOutput([]);
-    } else {
-      setOutput([...output, `> ${input}`, data.result]);
-    }
+
+    // Send the command to the server-side API ("/api/shell")
     const response = await fetch("/api/shell", {
       method: "POST",
       body: JSON.stringify({ cmd: input }),
       headers: { "Content-Type": "application/json" },
     });
+
+    // Wait for the response and parse it as JSON
     const data = await response.json();
-    setOutput([...output, `> ${input}`, data.result]);
+
+    // Check if the response indicates clearing the terminal
+    if (data.result === "__CLEAR__") {
+      setOutput([]); // Clear the terminal output
+    } else {
+      // Otherwise, append the command and its result to the output
+      setOutput([...output, `> ${input}`, data.result]);
+    }
+
+    // Clear the input field
     setInput("");
   };
 
