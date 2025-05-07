@@ -49,18 +49,18 @@ export function simulateShellCommand(cmd: string): string {
 
     case "trace":
       return `Tracing route to The Source [42.42.42.42]...
-  hop 1... 10ms
-  hop 2... 8ms
-  hop 3... Accessing hidden node...
-  hop 4... Connection unstable.
-  hop 5... Matrix core reached.`
+  \nhop 1... 10ms
+  \nhop 2... 8ms
+  \nhop 3... Accessing hidden node...
+  \nhop 4... Connection unstable.
+  \nhop 5... Matrix core reached.`
 
     case "ping matrix":
       return `Pinging matrix.neoshell.net [101.101.101.1] with 32 bytes of data:
-Reply from 101.101.101.1: bytes=32 time=5ms TTL=64
-Reply from 101.101.101.1: bytes=32 time=5ms TTL=64
-Reply from 101.101.101.1: bytes=32 time=5ms TTL=64
-Matrix core stable.`;
+\nReply from 101.101.101.1: bytes=32 time=5ms TTL=64
+\nReply from 101.101.101.1: bytes=32 time=5ms TTL=64
+\nReply from 101.101.101.1: bytes=32 time=5ms TTL=64
+\nMatrix core stable.`;
 
     case "decode":
       return "01110100 01110010 01110101 01110100 01101000 = truth";
@@ -70,22 +70,22 @@ Matrix core stable.`;
 
     case "nmap":
       return `Starting Nmap 7.93 ( https://nmap.org ) at ${new Date().toLocaleString()}
-  Scanning localhost (127.0.0.1)...
-  PORT     STATE SERVICE
-  22/tcp   open  ssh
-  80/tcp   open  http
-  443/tcp  open  https
-  1337/tcp open  elite`;
+  \nScanning localhost (127.0.0.1)...
+  \nPORT     STATE SERVICE
+  \n22/tcp   open  ssh
+  \n80/tcp   open  http
+  \n443/tcp  open  https
+  \n1337/tcp open  elite`;
 
     case "banner":
       return `
-        _   _                 ____  _          _ _
-       | \\ | | ___  _ __ ___ / ___|| |__   ___| | |
-       |  \\| |/ _ \\| '__/ _ \\\\___ \\| '_ \\ / _ \\ | |
-       | |\\  | (_) | | | (_) |___) | | | |  __/ | |
-       |_| \\_|\\___/|_|  \\___/____/|_| |_|\\___|_|_|
-         Welcome to NeoShell — type 'help'
-        `;
+       \n _   _                 ____  _          _ _
+       \n| \\ | | ___  _ __ ___ / ___|| |__   ___| | |
+       \n|  \\| |/ _ \\| '__/ _ \\\\___ \\| '_ \\ / _ \\ | |
+       \n| |\\  | (_) | | | (_) |___) | | | |  __/ | |
+       \n|_| \\_|\\___/|_|  \\___/____/|_| |_|\\___|_|_|
+        \n Welcome to NeoShell — type 'help'
+        \n`;
 
     case "cat secrets.txt":
       return "Accessing secrets.txt...\n\n[REDACTED] The Matrix has you...\nFollow the white rabbit.";
@@ -105,26 +105,26 @@ Matrix core stable.`;
     case "history":
       return `
   1  help
-  2  whoami
-  3  hack the planet
-  4  decode
-  5  ping matrix
-  6  sudo access
-  7  banner`;
+  \n2  whoami
+  \n3  hack the planet
+  \n4  decode
+  \n5  ping matrix
+  \n6  sudo access
+  \n7  banner`;
 
     case "man hack":
       return `HACK(1)                NeoShell Manual                HACK(1)
-  NAME
-      hack - attempt to subvert systems with style
-  
-  SYNOPSIS
-      hack [target]
-  
-  DESCRIPTION
-      Executes a cinematic hacking sequence. Results not guaranteed.
-  
-  SEE ALSO
-      sudo(8), nmap(1), matrix(6)`;
+  \nNAME
+      \nhack - attempt to subvert systems with style
+  \n
+  \nSYNOPSIS
+      \nhack [target]
+  \n
+  \nDESCRIPTION
+      \nExecutes a cinematic hacking sequence. Results not guaranteed.
+  \n
+  \nSEE ALSO
+      \nsudo(8), nmap(1), matrix(6)`;
 
     case "matrix":
       return "Wake up, Neo...\nThe Matrix has you...\nFollow the white rabbit.";
@@ -134,10 +134,10 @@ Matrix core stable.`;
 
     case "log":
       return `LOG [System Boot Time: ${new Date().toLocaleTimeString()}]
-  - User authenticated.
-  - Intrusion detection systems active.
-  - No anomalies detected.
-  - Awaiting input...`;
+  \n- User authenticated.
+  \n- Intrusion detection systems active.
+  \n- No anomalies detected.
+  \n- Awaiting input...`;
 
     default:
       return `Unknown command: ${cmd}\nType 'help' to see a list of available commands.`;
