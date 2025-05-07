@@ -56,27 +56,28 @@ export default function MatrixSplash({ onContinue }: { onContinue: () => void })
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden 
-    flex items-center justify-center">
+    <div className="relative flex h-screen w-full items-center 
+    justify-center overflow-hidden bg-black">
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
       <motion.div
-        className="z-10 text-center text-green-400 px-4 max-w-2xl"
+        className="z-10 max-w-2xl px-4 text-center text-green-400"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <div className="text-xl sm:text-3xl md:text-4xl font-mono leading-relaxed">
+        <div className="font-mono text-xl leading-relaxed sm:text-3xl md:text-4xl">
           <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Welcome to NeoShell")
+                .pauseFor(2000)
+                .typeString("Are you ready to uncover the truth?")
+                .start();
+            }}
             options={{
-              strings: [
-                "Welcome to NeoShell.",
-                "Are you ready to reclaim your digital autonomy?",
-                "Uncover the infrastructure beneath the interface.",
-              ],
               autoStart: true,
               delay: 40,
-              pauseFor: 2000,
               loop: false,
             }}
           />
@@ -85,9 +86,9 @@ export default function MatrixSplash({ onContinue }: { onContinue: () => void })
         {showButton && (
           <motion.button
             onClick={onContinue}
-            className="mt-8 px-6 py-3 border border-green-500 text-green-300 
-            hover:bg-green-500 hover:text-black rounded-md font-mono 
-            transition-colors duration-300"
+            className="mt-8 rounded-md border border-green-500 px-6 py-3 
+            font-mono text-green-300 transition-colors duration-300 
+            hover:bg-green-500 hover:text-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
