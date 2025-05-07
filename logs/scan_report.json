@@ -1,0 +1,190 @@
+[
+    {
+        "url": "https://medium.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.upwork.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://trello.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://github.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.bbc.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.walmart.com",
+        "error": "Cannot connect to host www.walmart.com:443 ssl:True [SSLCertVerificationError: (5, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1018)')]"
+    },
+    {
+        "url": "https://www.shopify.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://asana.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.twitch.tv",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.zillow.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.linkedin.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://slack.com",
+        "stack": [
+            "Apache"
+        ]
+    },
+    {
+        "url": "https://wordpress.com",
+        "stack": [
+            "PHP",
+            "WordPress",
+            "Nginx"
+        ]
+    },
+    {
+        "url": "https://www.coursera.org",
+        "stack": [
+            "WordPress",
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.instagram.com",
+        "stack": [
+            "ReactJS",
+            "VueJS",
+            "PHP"
+        ]
+    },
+    {
+        "url": "https://www.nytimes.com",
+        "stack": [
+            "WordPress",
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.squarespace.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.etsy.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://stackoverflow.com",
+        "stack": [
+            "ReactJS",
+            "VueJS",
+            "Angular"
+        ]
+    },
+    {
+        "url": "https://www.wikipedia.org",
+        "stack": [
+            "PHP"
+        ]
+    },
+    {
+        "url": "https://www.alibaba.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://zoom.us",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.hulu.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.paypal.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.baidu.com",
+        "stack": [
+            "Unknown"
+        ]
+    },
+    {
+        "url": "https://www.reddit.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://dribbble.com",
+        "stack": [
+            "Nginx"
+        ]
+    },
+    {
+        "url": "https://www.dropbox.com",
+        "stack": [
+            "ReactJS"
+        ]
+    },
+    {
+        "url": "https://www.airbnb.com",
+        "stack": [
+            "ReactJS",
+            "Nginx"
+        ]
+    },
+    {
+        "url": "https://www.netflix.com",
+        "stack": [
+            "ReactJS",
+            "VueJS"
+        ]
+    }
+]
